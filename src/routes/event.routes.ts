@@ -46,7 +46,7 @@ router.get('/recent', async (_req: Request, res: Response): Promise<void> => {
   }
 });
 
-router.get('/upcoming', async (_req: Request, res: Response): Promise<void> => {
+router.get('/', async (_req: Request, res: Response): Promise<void> => {
   try {
     const db = await connectDB();
     const today = new Date().toISOString().split('T')[0];
